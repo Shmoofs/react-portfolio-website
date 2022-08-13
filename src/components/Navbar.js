@@ -1,3 +1,10 @@
+import {
+    MapContainer,
+    TileLayer,
+    useMap,
+    Marker,
+    Popup
+  } from 'https://cdn.esm.sh/react-leaflet'
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
 
@@ -26,6 +33,17 @@ export default function Navbar() {
           className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
           Hire Me
           <ArrowRightIcon className="w-4 h-4 ml-1" />
+          <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[51.505, -0.09]}>
+                <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            </MapContainer>          
         </a>
       </div>
     </header>

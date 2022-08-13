@@ -5,19 +5,17 @@ import Projects from './components/Projects.js'
 import Skills from './components/Skills.js'
 import Testimonials from './components/Testimonials.js'
 
-import './App.scss'
 import React from "react"
 
 export default function App(){
   return (
-    <main>
-      <Navbar>
-        <About />
-        <Projects />
-        <Skills />
-        <Testimonials />
-        <Contact />
-      </Navbar>
+    <main className = "text-gray-400 bg-gray-900 body-font">
+      <Navbar />
+      <About />
+      <Projects />
+      <Skills />
+      <Testimonials />
+      <Contact />
     </main>
   );
 }
